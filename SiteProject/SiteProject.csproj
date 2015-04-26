@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.Clients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.Clients.1.0.2\lib\DotNetOpenAuth.Clients.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -116,6 +120,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Authentication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +171,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Front_End\bootstrap\css\carousel.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\DotNetOpenAuth.GoogleOAuth2-1.1.2\DotNetOpenAuth.GoogleOAuth2\DotNetOpenAuth.GoogleOAuth2.csproj">
+      <Project>{c0ac79c5-d879-47e2-8cd1-f97060bd40f3}</Project>
+      <Name>DotNetOpenAuth.GoogleOAuth2</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
